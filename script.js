@@ -1,12 +1,13 @@
 const wrapper = document.getElementById("wrapper");
 
-const min = 3;
-const max = 8;
+const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+// 3 configs
+const config = [1, 2, 3];
 
 setInterval(() => {
-  
-  const res = rand(min, max);
-  console.log("I love u: ", res);
+  const index = rand(0, config.length);
+
+  wrapper.dataset.configuration = config[index];
+  console.log(index);
 }, 1000);
