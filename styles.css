@@ -19,6 +19,9 @@ body {
   width: 50%;
   height: 50%;
   border-radius: 8rem;
+  transition: top, left, width, height;
+  transition-duration: 850ms;
+  transition-timing-function: ease-in-out;
   /* background-color: red; */
 }
 
@@ -41,28 +44,28 @@ body {
 }
 
 /*  config #1 */
-#wrapper > .shape:nth-child(1) {
+#wrapper[data-configuration="1"] > .shape:nth-child(1) {
   background-color: aliceblue;
   top: 20%;
   left: 20%;
   width: 30%;
   height: 70%;
 }
-#wrapper > .shape:nth-child(2) {
+#wrapper[data-configuration="1"] > .shape:nth-child(2) {
   background-color: blueviolet;
   top: 60%;
   left: 0%;
   width: 20%;
   height: 20%;
 }
-#wrapper > .shape:nth-child(3) {
+#wrapper[data-configuration="1"] > .shape:nth-child(3) {
   background-color: yellowgreen;
   top: 20%;
   left: 50%;
   width: 40%;
   height: 70%;
 }
-#wrapper > .shape:nth-child(4) {
+#wrapper[data-configuration="1"] > .shape:nth-child(4) {
   background-color: black;
   top: 20%;
   left: 70%;
@@ -71,28 +74,28 @@ body {
 }
 
 /* config #2 */
-#wrapper > .shape:nth-child(1) {
+#wrapper[data-configuration="2"] > .shape:nth-child(1) {
   background-color: aliceblue;
   top: 50%;
   left: 40%;
   width: 70%;
   height: 30%;
 }
-#wrapper > .shape:nth-child(2) {
+#wrapper[data-configuration="2"] > .shape:nth-child(2) {
   background-color: blueviolet;
   top: 90%;
   left: 20%;
   width: 70%;
   height: 10%;
 }
-#wrapper > .shape:nth-child(3) {
+#wrapper[data-configuration="2"] > .shape:nth-child(3) {
   background-color: yellowgreen;
   top: 40%;
   left: 70%;
   width: 30%;
   height: 40%;
 }
-#wrapper > .shape:nth-child(4) {
+#wrapper[data-configuration="2"] > .shape:nth-child(4) {
   background-color: black;
   top: 20%;
   left: 70%;
