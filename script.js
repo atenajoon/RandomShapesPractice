@@ -22,4 +22,6 @@ setInterval(() => {
   console.log(index);
 
   prev = index;
-}, 1000);
+}, 3000);
+
+wrapper.dataset.configuration = 1;
