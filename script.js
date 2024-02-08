@@ -24,4 +24,4 @@ setInterval(() => {
   prev = index;
 }, 3000);
 
-wrapper.dataset.configuration = 1;
+// wrapper.dataset.configuration = 2;
