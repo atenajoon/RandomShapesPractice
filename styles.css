@@ -1,9 +1,8 @@
 :root {
   --black: rgb(47, 47, 47);
-  --gray:rgb(79, 79, 79);
+  --gray: rgb(79, 79, 79);
   --white: aliceblue;
 }
-
 
 body {
   background-color: pink;
@@ -23,20 +22,81 @@ body {
 
 #wrapper > .shape {
   position: absolute;
-  transition: top, left, width, height;
+  transition: top, left, width, height, border-radius;
   transition-duration: 1000ms;
   transition-timing-function: ease-in-out;
   border-radius: 0.2rem;
 }
 
-#wrapper > .shape:nth-child(1), .shape:nth-child(2), .shape:nth-child(3) {
+#wrapper > .shape:nth-child(1),
+.shape:nth-child(2),
+.shape:nth-child(3) {
   background-color: var(--black);
 }
-#wrapper > .shape:nth-child(4), .shape:nth-child(5) {
+#wrapper > .shape:nth-child(4),
+.shape:nth-child(5) {
   background-color: var(--gray);
 }
-#wrapper > .shape:nth-child(6), .shape:nth-child(7), .shape:nth-child(8), .shape:nth-child(9) {
+#wrapper > .shape:nth-child(6),
+.shape:nth-child(7),
+.shape:nth-child(8),
+.shape:nth-child(9) {
   background-color: var(--white);
+}
+
+/* Roundnesses Configurations */
+#wrapper[data-roundness='1'] > .shape:nth-child(4) {
+  border-radius: 0.5rem;
+}
+#wrapper[data-roundness='1'] > .shape:nth-child(6) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='1'] > .shape:nth-child(7) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='1'] > .shape:nth-child(8) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='1'] > .shape:nth-child(9) {
+  border-radius: 10rem;
+}
+
+#wrapper[data-roundness='2'] > .shape:nth-child(2) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='2'] > .shape:nth-child(3) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='2'] > .shape:nth-child(6) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='2'] > .shape:nth-child(7) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='2'] > .shape:nth-child(8) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='2'] > .shape:nth-child(9) {
+  border-radius: 10rem;
+}
+
+#wrapper[data-roundness='3'] > .shape:nth-child(2) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='3'] > .shape:nth-child(4) {
+  border-bottom-left-radius: 1rem;
+}
+#wrapper[data-roundness='3'] > .shape:nth-child(6) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='3'] > .shape:nth-child(7) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='3'] > .shape:nth-child(8) {
+  border-radius: 10rem;
+}
+#wrapper[data-roundness='3'] > .shape:nth-child(9) {
+  border-radius: 10rem;
 }
 
 /* config #1 : Monitor >> Web Dev*/
@@ -51,14 +111,12 @@ body {
   left: 42%;
   width: 15%;
   height: 25%;
-  /*border-radius: 0;*/
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(3) {
   top: 90%;
   left: 32%;
   width: 35%;
   height: 2%;
-  /*border-radius: 0;*/
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(4) {
   top: 2%;
@@ -66,7 +124,6 @@ body {
   width: 67%;
   height: 56.5%;
   z-index: 1;
-  border-radius: 0.5rem;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(5) {
   top: 60%;
@@ -76,27 +133,31 @@ body {
   z-index: 1;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(6) {
-  background-color: white;
   top: 66.5%;
   left: 80.6%;
   width: 1%;
   height: 0.5%;
-  border-radius: 10rem;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(7) {
-  width: 0%;
-  height: 0%;
+  top: 66.5%;
+  left: 80.6%;
+  width: 1%;
+  height: 0.5%;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(8) {
-  width: 0%;
-  height: 0%;
+  top: 66.5%;
+  left: 80.6%;
+  width: 1%;
+  height: 0.5%;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(9) {
-  width: 0%;
-  height: 0%;
+  top: 66.5%;
+  left: 80.6%;
+  width: 1%;
+  height: 0.5%;
 }
 
-/* config #2 : Monitor >> Game Dev*/
+/* config #2 : Controlr >> Game Dev*/
 #wrapper[data-configuration='2'] > .shape:nth-child(1) {
   top: 0%;
   left: 35%;
@@ -108,14 +169,12 @@ body {
   left: 22%;
   width: 29%;
   height: 47%;
-  border-radius: 10rem;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(3) {
   top: 0%;
   left: 49%;
   width: 29%;
   height: 47%;
-  border-radius: 10rem;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(4) {
   top: 9%;
@@ -123,7 +182,6 @@ body {
   width: 5.5%;
   height: 29.5%;
   z-index: 1;
-  /*border-radius: 0;*/
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(5) {
   top: 19%;
@@ -131,31 +189,35 @@ body {
   width: 18%;
   height: 9%;
   z-index: 1;
-  /*border-radius: 0;*/
 }
-#wrapper[data-configuration='2'] > .shape:nth-child(6) {
+#wrapper[data-configuration='2'] > .shape:nth-child(6),
+.shape:nth-child(7) {
   top: 13%;
   left: 66%;
   width: 6%;
   height: 9.5%;
   z-index: 1;
-  border-radius: 10rem;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(7) {
+  top: 13%;
+  left: 66%;
+  width: 6%;
+  height: 9.5%;
+  z-index: 1;
+}
+#wrapper[data-configuration='2'] > .shape:nth-child(8) {
   top: 23%;
   left: 60%;
   width: 6%;
   height: 9.5%;
   z-index: 1;
-  border-radius: 10rem;
-}
-#wrapper[data-configuration='2'] > .shape:nth-child(8) {
-  width: 0%;
-  height: 0%;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(9) {
-  width: 0%;
-  height: 0%;
+  top: 23%;
+  left: 60%;
+  width: 6%;
+  height: 9.5%;
+  z-index: 1;
 }
 
 /*  config #3 : Mobile Dev */
@@ -170,7 +232,6 @@ body {
   left: 35%;
   width: 16%;
   height: 7%;
-  border-radius: 10rem;
   z-index: 1;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(3) {
@@ -185,7 +246,6 @@ body {
   left: 31%;
   width: 23%;
   height: 73%;
-  border-radius: 1rem;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(5) {
   top: 26%;
@@ -199,15 +259,13 @@ body {
   left: 37.8%;
   width: 9%;
   height: 0.5%;
-  border-radius: 10rem;
   z-index: 3;
 }
-#wrapper[data-configuration='3'] > .shape:nth-child(7) {   
+#wrapper[data-configuration='3'] > .shape:nth-child(7) {
   top: 22.5%;
   left: 59.5%;
   width: 8%;
   height: 1%;
-  border-radius: 10rem;
   z-index: 3;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(8) {
@@ -215,7 +273,6 @@ body {
   left: 47.6%;
   width: 0.5%;
   height: 0.8%;
-  border-radius: 10rem;
   z-index: 3;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(9) {
@@ -223,10 +280,8 @@ body {
   left: 61.5%;
   width: 5%;
   height: 8%;
-  border-radius: 10rem;
   z-index: 3;
 }
-
 
 /* #wrapper[data-configuration='3'] > .shape:nth-child(6) {
   background-color: rgb(63, 63, 63);
