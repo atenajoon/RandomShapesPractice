@@ -15,13 +15,13 @@ const uniqueRand = (min, max, prev) => {
 // 3 configs
 const config = [1, 2, 3];
 
-// setInterval(() => {
-//   const index = uniqueRand(0, config.length, prev);
+setInterval(() => {
+  const index = uniqueRand(0, config.length, prev);
 
-//   wrapper.dataset.configuration = config[index];
-//   console.log(index);
+  wrapper.dataset.configuration = config[index];
+  console.log(index);
 
-//   prev = index;
-// }, 3000);
+  prev = index;
+}, 3000);
 
-wrapper.dataset.configuration = 3;
+// wrapper.dataset.configuration = 1;

@@ -1,3 +1,10 @@
+:root {
+  --black: rgb(47, 47, 47);
+  --gray:rgb(79, 79, 79);
+  --white: aliceblue;
+}
+
+
 body {
   background-color: pink;
   margin: 0;
@@ -16,41 +23,44 @@ body {
 
 #wrapper > .shape {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  border-radius: 1rem;
   transition: top, left, width, height;
-  transition-duration: 850ms;
+  transition-duration: 1000ms;
   transition-timing-function: ease-in-out;
-  /* background-color: red; */
+  border-radius: 0.2rem;
+}
+
+#wrapper > .shape:nth-child(1), .shape:nth-child(2), .shape:nth-child(3) {
+  background-color: var(--black);
+}
+#wrapper > .shape:nth-child(4), .shape:nth-child(5) {
+  background-color: var(--gray);
+}
+#wrapper > .shape:nth-child(6), .shape:nth-child(7), .shape:nth-child(8), .shape:nth-child(9) {
+  background-color: var(--white);
 }
 
 /* config #1 : Monitor >> Web Dev*/
 #wrapper[data-configuration='1'] > .shape:nth-child(1) {
-  background-color: silver;
   top: 0%;
   left: 15%;
   width: 70%;
   height: 67%;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(2) {
-  background-color: silver;
   top: 65%;
   left: 42%;
   width: 15%;
   height: 25%;
-  border-radius: 0;
+  /*border-radius: 0;*/
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(3) {
-  background-color: silver;
   top: 90%;
   left: 32%;
   width: 35%;
   height: 2%;
-  border-radius: 0;
+  /*border-radius: 0;*/
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(4) {
-  background-color: rgb(47, 47, 47);
   top: 2%;
   left: 16.5%;
   width: 67%;
@@ -59,7 +69,6 @@ body {
   border-radius: 0.5rem;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(5) {
-  background-color: rgb(47, 47, 47);
   top: 60%;
   left: 26%;
   width: 48%;
@@ -74,17 +83,27 @@ body {
   height: 0.5%;
   border-radius: 10rem;
 }
+#wrapper[data-configuration='1'] > .shape:nth-child(7) {
+  width: 0%;
+  height: 0%;
+}
+#wrapper[data-configuration='1'] > .shape:nth-child(8) {
+  width: 0%;
+  height: 0%;
+}
+#wrapper[data-configuration='1'] > .shape:nth-child(9) {
+  width: 0%;
+  height: 0%;
+}
 
 /* config #2 : Monitor >> Game Dev*/
 #wrapper[data-configuration='2'] > .shape:nth-child(1) {
-  background-color: rgb(47, 47, 47);
   top: 0%;
   left: 35%;
   width: 30%;
   height: 40%;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(2) {
-  background-color: rgb(47, 47, 47);
   top: 0%;
   left: 22%;
   width: 29%;
@@ -92,7 +111,6 @@ body {
   border-radius: 10rem;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(3) {
-  background-color: rgb(47, 47, 47);
   top: 0%;
   left: 49%;
   width: 29%;
@@ -100,7 +118,22 @@ body {
   border-radius: 10rem;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(4) {
-  background-color: aliceblue;
+  top: 9%;
+  left: 33.2%;
+  width: 5.5%;
+  height: 29.5%;
+  z-index: 1;
+  /*border-radius: 0;*/
+}
+#wrapper[data-configuration='2'] > .shape:nth-child(5) {
+  top: 19%;
+  left: 27%;
+  width: 18%;
+  height: 9%;
+  z-index: 1;
+  /*border-radius: 0;*/
+}
+#wrapper[data-configuration='2'] > .shape:nth-child(6) {
   top: 13%;
   left: 66%;
   width: 6%;
@@ -108,8 +141,7 @@ body {
   z-index: 1;
   border-radius: 10rem;
 }
-#wrapper[data-configuration='2'] > .shape:nth-child(5) {
-  background-color: aliceblue;
+#wrapper[data-configuration='2'] > .shape:nth-child(7) {
   top: 23%;
   left: 60%;
   width: 6%;
@@ -117,146 +149,82 @@ body {
   z-index: 1;
   border-radius: 10rem;
 }
-#wrapper[data-configuration='2'] > .shape:nth-child(6) {
-  background-color: rgb(63, 63, 63);
-  top: 9%;
-  left: 33.2%;
-  width: 5.5%;
-  height: 29.5%;
-  z-index: 1;
-  border-radius: 0;
+#wrapper[data-configuration='2'] > .shape:nth-child(8) {
+  width: 0%;
+  height: 0%;
 }
-#wrapper[data-configuration='2'] > .shape:nth-child(7) {
-  background-color: rgb(63, 63, 63);
-  top: 19%;
-  left: 27%;
-  width: 18%;
-  height: 9%;
-  z-index: 1;
-  border-radius: 0;
+#wrapper[data-configuration='2'] > .shape:nth-child(9) {
+  width: 0%;
+  height: 0%;
 }
-/* #wrapper[data-configuration='2'] > .shape:nth-child(5) {
-  background-color: rgb(47, 47, 47);
-  top: 60%;
-  left: 26%;
-  width: 48%;
-  height: 0.3%;
-  z-index: 1;
-} */
-/* #wrapper[data-configuration='2'] > .shape:nth-child(6) {
-  color: aliceblue;
-  top: 5%;
-  left: 20%;
-  width: 60%;
-  height: 50%;
-  z-index: 3;
-} */
-/* #wrapper[data-configuration='2'] > .shape:nth-child(1) {
-  background-color: aliceblue;
-  top: 50%;
-  left: 40%;
-  width: 70%;
-  height: 30%;
-}
-#wrapper[data-configuration='2'] > .shape:nth-child(2) {
-  background-color: blueviolet;
-  top: 90%;
-  left: 20%;
-  width: 70%;
-  height: 10%;
-}
-#wrapper[data-configuration='2'] > .shape:nth-child(3) {
-  background-color: yellowgreen;
-  top: 40%;
-  left: 70%;
-  width: 30%;
-  height: 40%;
-}
-#wrapper[data-configuration='2'] > .shape:nth-child(4) {
-  background-color: black;
-  top: 20%;
-  left: 70%;
-  width: 10%;
-  height: 40%;
-} */
 
 /*  config #3 : Mobile Dev */
-/* Android */
 #wrapper[data-configuration='3'] > .shape:nth-child(1) {
-  background-color: rgb(47, 47, 47);
   top: 0%;
   left: 30%;
   width: 25%;
   height: 80%;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(2) {
-  background-color: rgb(79, 79, 79);
+  top: 1.3%;
+  left: 35%;
+  width: 16%;
+  height: 7%;
+  border-radius: 10rem;
+  z-index: 1;
+}
+#wrapper[data-configuration='3'] > .shape:nth-child(3) {
+  top: 20%;
+  left: 50%;
+  width: 27%;
+  height: 80%;
+  z-index: 2;
+}
+#wrapper[data-configuration='3'] > .shape:nth-child(4) {
   top: 5.5%;
   left: 31%;
   width: 23%;
   height: 73%;
   border-radius: 1rem;
 }
-#wrapper[data-configuration='3'] > .shape:nth-child(3) {
-  background-color: rgb(47, 47, 47);
-  top: 1.3%;
-  left: 35%;
-  width: 16%;
-  height: 7%;
-  border-radius: 10rem;
+#wrapper[data-configuration='3'] > .shape:nth-child(5) {
+  top: 26%;
+  left: 51.5%;
+  width: 24%;
+  height: 62%;
+  z-index: 2;
 }
-#wrapper[data-configuration='3'] > .shape:nth-child(4) {
-  background-color: aliceblue;
+#wrapper[data-configuration='3'] > .shape:nth-child(6) {
   top: 5%;
   left: 37.8%;
   width: 9%;
   height: 0.5%;
   border-radius: 10rem;
-  z-index: 1;
+  z-index: 3;
 }
-#wrapper[data-configuration='3'] > .shape:nth-child(5) {
-  background-color: aliceblue;
-  top: 5%;
-  left: 47.6%;
-  width: 0.5%;
-  height: 0.8%;
-  border-radius: 10rem;
-  z-index: 1;
-}
-
-/* IOS */
-#wrapper[data-configuration='3'] > .shape:nth-child(6) {
-  background-color: rgb(47, 47, 47);
-  top: 20%;
-  left: 50%;
-  width: 27%;
-  height: 80%;
-}
-#wrapper[data-configuration='3'] > .shape:nth-child(7) {
-  background-color: rgb(79, 79, 79);
-  top: 26%;
-  left: 51.5%;
-  width: 24%;
-  height: 62%;
-  border-radius: 0rem;
-}
-#wrapper[data-configuration='3'] > .shape:nth-child(8) {
-  background-color: aliceblue;
+#wrapper[data-configuration='3'] > .shape:nth-child(7) {   
   top: 22.5%;
   left: 59.5%;
   width: 8%;
   height: 1%;
   border-radius: 10rem;
-  z-index: 1;
+  z-index: 3;
+}
+#wrapper[data-configuration='3'] > .shape:nth-child(8) {
+  top: 5%;
+  left: 47.6%;
+  width: 0.5%;
+  height: 0.8%;
+  border-radius: 10rem;
+  z-index: 3;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(9) {
-  background-color: aliceblue;
   top: 90%;
   left: 61.5%;
   width: 5%;
   height: 8%;
   border-radius: 10rem;
-  z-index: 1;
+  z-index: 3;
 }
 
 
@@ -280,7 +248,7 @@ body {
 } */
 /* 
 #wrapper[data-configuration='3'] > .shape:nth-child(1) {
-  background-color: aliceblue;
+  background-color: var(--white);
   top: 20%;
   left: 20%;
   width: 30%;
@@ -301,6 +269,51 @@ body {
   height: 70%;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(4) {
+  background-color: black;
+  top: 20%;
+  left: 70%;
+  width: 10%;
+  height: 40%;
+} */
+
+/* #wrapper[data-configuration='2'] > .shape:nth-child(5) {
+  background-color: var(--black);
+  top: 60%;
+  left: 26%;
+  width: 48%;
+  height: 0.3%;
+  z-index: 1;
+} */
+/* #wrapper[data-configuration='2'] > .shape:nth-child(6) {
+  color: var(--white);
+  top: 5%;
+  left: 20%;
+  width: 60%;
+  height: 50%;
+  z-index: 3;
+} */
+/* #wrapper[data-configuration='2'] > .shape:nth-child(1) {
+  background-color: var(--white);
+  top: 50%;
+  left: 40%;
+  width: 70%;
+  height: 30%;
+}
+#wrapper[data-configuration='2'] > .shape:nth-child(2) {
+  background-color: blueviolet;
+  top: 90%;
+  left: 20%;
+  width: 70%;
+  height: 10%;
+}
+#wrapper[data-configuration='2'] > .shape:nth-child(3) {
+  background-color: yellowgreen;
+  top: 40%;
+  left: 70%;
+  width: 30%;
+  height: 40%;
+}
+#wrapper[data-configuration='2'] > .shape:nth-child(4) {
   background-color: black;
   top: 20%;
   left: 70%;
