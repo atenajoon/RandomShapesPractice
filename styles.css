@@ -26,6 +26,8 @@ body {
   transition-duration: 1000ms;
   transition-timing-function: ease-in-out;
   border-radius: 0.2rem;
+  height: 0%;
+  
 }
 
 #wrapper > .shape:nth-child(1),
@@ -166,13 +168,13 @@ body {
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(2) {
   top: 0%;
-  left: 22%;
+  left: 21.5%;
   width: 29%;
   height: 47%;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(3) {
   top: 0%;
-  left: 49%;
+  left: 49.5%;
   width: 29%;
   height: 47%;
 }
