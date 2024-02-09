@@ -67,12 +67,12 @@ body {
   z-index: 1;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(6) {
-  color: aliceblue;
-  top: 5%;
-  left: 20%;
-  width: 60%;
-  height: 50%;
-  z-index: 3;
+  background-color: white;
+  top: 66.5%;
+  left: 80.6%;
+  width: 1%;
+  height: 0.5%;
+  border-radius: 10rem;
 }
 
 /* config #2 : Monitor >> Game Dev*/
