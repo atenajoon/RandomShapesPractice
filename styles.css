@@ -56,78 +56,108 @@ body {
 }
 
 .content-1 {
+  font-family: 'Gameplay';
+  font-size: 2rem;
   color: var(--green-text);
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
-  position: relative;
-  transform: rotate(-25deg);
+  /* position: relative; */
+  /* transform: rotate(-25deg); */
 }
 
 .content-2 {
   font-family: 'From Cartoon Blocks';
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--blue-text);
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
-  position: relative;
-  transform: rotate(20deg);
+  /* position: relative; */
+  /* transform: rotate(20deg); */
 }
-
+.word-container {
+  display: contents;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+}
 .word {
-  position: absolute;
+  /* position: relative;
   font-family: 'From Cartoon Blocks';
-  font-size: 5rem;
+  font-size: 5rem; */
+  
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 24px; */
 }
-
+.bigger {
+  grid-row: 2 / span 2; /* Span 2 rows starting from the 2nd row */
+  grid-column: 2 / span 2; /* Span 2 columns starting from the 2nd column */
+  background-color: blanchedalmond;
+  justify-self: center; /* Horizontally center the .bigger element within its grid cells */
+  align-self: center; 
+}
 /* Random positioning for each word */
 .word:nth-child(1) {
-  top: 10%;
-  left: 20%;
+  /* top: 10%; */
+  /* left: 20%; */
 }
 
 .word:nth-child(2) {
-  top: 10%;
-  left: 65%;
+  /* top: 10%; */
+  /* left: 65%; */
 }
 
 .word:nth-child(3) {
-  top: 23%;
-  left: 80%;
+  /* top: 23%; */
+  /* left: 80%; */
 }
 
 .word:nth-child(4) {
-  top: 40%;
-  left: 5%;
+  /* top: 40%; */
+  /* left: 5%; */
 }
 
 .word:nth-child(5) {
-  top: 60%;
-  left: 75%;
+  /* top: 60%; */
+  /* left: 75%; */
 }
 
-.word:nth-child(6) {
-  top: 50%;
-  left: 85%;
-}
-
+ .word:nth-child(6) {
+  /* top: 50%; */
+  /* left: 85%; */
+  background-color: blanchedalmond;
+ }
 .word:nth-child(7) {
-  top: 70%;
-  left: 10%;
+  /* grid-row: 3 / span 1; Span 2 rows starting from the 2nd row */
+  grid-column: 4 / span 1; /* Span 2 columns starting from the 2nd column */
+  background-color: rgb(205, 253, 255);
+  justify-self: center; /* Horizontally center the .bigger element within its grid cells */
+  align-self: center; 
+  /* top: 70%; */
+  /* left: 10%; */
 }
 
 .word:nth-child(8) {
-  top: 80%;
-  left: 60%;
+  /* top: 80%; */
+  /* left: 60%; */
 }
 
 .word:nth-child(9) {
-  top: 87%;
-  left: 40%;
+  /* top: 87%; */
+  /* left: 40%; */
 }
 
 .word:nth-child(10) {
-  top: 85%;
-  left: 20%;
+  /* top: 85%; */
+  /* left: 20%; */
+  grid-column: 2 / span 2; /* Span 2 columns starting from the 2nd column */
+  background-color: rgb(205, 253, 255);
+  justify-self: center; /* Horizontally center the .bigger element within its grid cells */
+  align-self: center; 
 }
 
 /* h1 {
@@ -144,9 +174,10 @@ p {
 /* -- Device Shapes -- */
 #wrapper {
   aspect-ratio: 1.618;
-  width: 90vmin;
-  margin: 3rem;
+  /* width: 90vmin;
+  margin: 3rem; */
   position: relative;
+  width: 100%;
 }
 
 #wrapper > .shape {
@@ -504,6 +535,8 @@ p {
   left: 70%;
   width: 10%;
   height: 40%;
-} */
+} */ 
+}
+}
 }
 }
