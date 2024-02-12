@@ -20,15 +20,15 @@ const configCombinations = [
   { configuration: 3, roundness: 3 }
 ];
 
-setInterval(() => {
-  const index = uniqueRand(0, configCombinations.length, prev);
-  const combination = configCombinations[index];
+// setInterval(() => {
+//   const index = uniqueRand(0, configCombinations.length, prev);
+//   const combination = configCombinations[index];
 
-  wrapper.dataset.configuration = combination.configuration;
-  wrapper.dataset.roundness = combination.roundness;
+//   wrapper.dataset.configuration = combination.configuration;
+//   wrapper.dataset.roundness = combination.roundness;
 
-  prev = index;
-}, 3000);
+//   prev = index;
+// }, 3000);
 
-// wrapper.dataset.configuration = 2;
-// wrapper.dataset.roundness = 2;
+wrapper.dataset.configuration = 1;
+wrapper.dataset.roundness = 1;
