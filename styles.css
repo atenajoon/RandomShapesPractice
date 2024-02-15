@@ -74,7 +74,7 @@ body {
   /* position: relative; */
   /* transform: rotate(20deg); */
 }
-.word-container {
+#word-container {
   display: contents;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
