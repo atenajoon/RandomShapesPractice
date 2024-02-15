@@ -1,4 +1,4 @@
-const wrapper = document.getElementById("wrapper");
+const wrapper = document.getElementById('wrapper');
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
@@ -7,17 +7,16 @@ let prev = 0;
 const uniqueRand = (min, max, prev) => {
   let next = prev;
 
-  while (prev === next)
-    next = rand(min, max);
+  while (prev === next) next = rand(min, max);
 
   return next;
-}
+};
 
 // 3 configs
 const configCombinations = [
   { configuration: 1, roundness: 1 },
   { configuration: 2, roundness: 2 },
-  { configuration: 3, roundness: 3 }
+  { configuration: 3, roundness: 3 },
 ];
 
 function changeShape() {
@@ -31,32 +30,54 @@ function changeShape() {
 }
 
 //  3 content configs
-const newContent = [
-  [ "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-["10", "20", "30", "40", "50", "60", "70", "80", "90"],
-["100", "200", "300", "400", "500", "600", "700", "800", "900"]
+const contentArray = [
+  [
+    'HTML',
+    'REACT',
+    'CSS',
+    'JS',
+    'WORDPRESS',
+    '',
+    'PHP',
+    'LARAVEL',
+    'FIGMA',
+    'BOOTSTRAP',
+  ],
+  [
+    'SONAR CLOUD',
+    'JS',
+    'ANDROID',
+    'IOS',
+    'TESTFLIGHT',
+    '',
+    'GIT',
+    'REACT NATIVE',
+    'UX/UI',
+    'JENKINS',
+  ],
+  ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 ];
 
 let contentIndex = 0;
 
 //  change HTML content
 function changeContent() {
-  const currentContent = newContent[contentIndex];
+  // const currentContent = contentArray[contentIndex];
+  const currentContent = contentArray[1];
 
-    // Loop through each div with class "word" and update its content from the array
-    var divs = document.querySelectorAll(".word");
-    divs.forEach(function (div, index) {
-      if (div.id != 'wrapper')
-        div.textContent = currentContent[index];
-    });
-  
-  contentIndex = (contentIndex + 1) % newContent.length;
+  // Loop through each div with class "word" and update its content from the array
+  var divs = document.querySelectorAll('.word');
+
+  divs.forEach(function (div, index) {
+    if (div.id != 'wrapper') div.textContent = currentContent[index];
+  });
+
+  contentIndex = (contentIndex + 1) % contentArray.length;
 }
 
 setInterval(() => {
   changeContent();
   changeShape();
-
 }, 3000);
 
 wrapper.dataset.configuration = 1;
