@@ -82,10 +82,16 @@ body {
 }
 .word {
   font-family: 'From Cartoon Blocks';
-  /* font-size: 5rem; */
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1; /* Initially visible */
+  transition: opacity; /* Smooth opacity transition */
+  transition-duration: 700ms;
+  transition-timing-function: ease-in-out;
+}
+.hide {
+  opacity: 0; /* Hidden */
 }
 .bigger {
   grid-row: 2 / span 3; /* Span 2 rows starting from the 2nd row */
