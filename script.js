@@ -21,7 +21,8 @@ const configCombinations = [
 
 function changeShape() {
   const index = uniqueRand(0, configCombinations.length, prev);
-  const combination = configCombinations[index];
+  // const combination = configCombinations[index];
+  const combination = configCombinations[1];
 
   wrapper.dataset.configuration = combination.configuration;
   wrapper.dataset.roundness = combination.roundness;
@@ -55,7 +56,18 @@ const contentArray = [
     'UX/UI',
     'JENKINS',
   ],
-  ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  [
+    'SONAR CLOUD',
+    'GIT',
+    'UNITY',
+    'IOS',
+    'JENKINS',
+    '',
+    'C#',
+    'ANDROID',
+    'TESTFLIGHT',
+    'UX/UI',
+  ],
 ];
 
 let contentIndex = 0;
@@ -63,7 +75,7 @@ let contentIndex = 0;
 //  change HTML content
 function changeContent() {
   // const currentContent = contentArray[contentIndex];
-  const currentContent = contentArray[1];
+  const currentContent = contentArray[2];
 
   // Loop through each div with class "word" and update its content from the array
   var divs = document.querySelectorAll('.word');
