@@ -58,7 +58,9 @@ body {
   overflow: hidden;
   z-index: -1;
 }
-
+#containerSection {
+  display: contents;
+}
 .content-1 {
   font-size: 4rem;
   color: var(--green-text);
@@ -93,7 +95,7 @@ body {
 .hide {
   opacity: 0; /* Hidden */
 }
-.bigger {
+.wrapperDiv {
   grid-row: 2 / span 3; /* Span 2 rows starting from the 2nd row */
   grid-column: 2 / span 3; /* Span 2 columns starting from the 2nd column */
   justify-self: center; /* Horizontally center the .bigger element within its grid cells */
@@ -120,7 +122,7 @@ body {
   /* js */
   grid-column: 3 / span 1;
   grid-row: 1/ span 1;
-  align-self: end;
+  align-self: center;
 }
 .word:nth-child(5) {
   /* React Native */
@@ -156,6 +158,16 @@ body {
 
 /* ------------------------------------ */
 /* -- Device Shapes -- */
+#shape-container {
+  display: grid;
+  position: fixed;
+  width: 70%;
+  transition: align-self;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
+  top: 50;
+}
+
 #wrapper {
   aspect-ratio: 1.618;
   /* width: 90vmin;

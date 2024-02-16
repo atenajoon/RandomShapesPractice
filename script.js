@@ -4,31 +4,12 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 let prev = 0;
 
-const uniqueRand = (min, max, prev) => {
-  let next = prev;
-
-  while (prev === next) next = rand(min, max);
-
-  return next;
-};
-
-// 3 configs
+// 3 shape configs
 const configCombinations = [
   { configuration: 1, roundness: 1 },
   { configuration: 2, roundness: 2 },
   { configuration: 3, roundness: 3 },
 ];
-
-function changeShape() {
-  const index = uniqueRand(0, configCombinations.length, prev);
-  const combination = configCombinations[index];
-  // const combination = configCombinations[1];
-
-  wrapper.dataset.configuration = combination.configuration;
-  wrapper.dataset.roundness = combination.roundness;
-
-  prev = index;
-}
 
 //  3 content configs
 const contentArray = [
@@ -46,9 +27,9 @@ const contentArray = [
   ],
   [
     'SONAR CLOUD',
-    'JS',
-    'ANDROID',
     'IOS',
+    'ANDROID',
+    'JS',
     'TESTFLIGHT',
     '',
     'GIT',
@@ -70,10 +51,38 @@ const contentArray = [
   ],
 ];
 
-let contentIndex = 0;
+
+const uniqueRand = (min, max, prev) => {
+  let next = prev;
+
+  while (prev === next) next = rand(min, max);
+
+  return next;
+};
+
+
+function changeShape() {
+  const index = uniqueRand(0, configCombinations.length, prev);
+  const combination = configCombinations[index];
+  // const combination = configCombinations[1];
+  toggleAlignSelf(index);
+
+  wrapper.dataset.configuration = combination.configuration;
+  wrapper.dataset.roundness = combination.roundness;
+
+  prev = index;
+}
+
+function toggleAlignSelf(i) {
+  console.log(i);
+  var shapeContainer = document.getElementById("shape-container");
+  // Check if align-self is currently set to 'end'
+  shapeContainer.style.alignSelf = (i === 1) ? 'end' : '';
+}
 
 //  change HTML content
 function changeContent() {
+  let contentIndex = 0;
   const currentContent = contentArray[contentIndex];
   // const currentContent = contentArray[2];
 
@@ -81,7 +90,7 @@ function changeContent() {
   var divs = document.querySelectorAll('.word');
 
   divs.forEach(function (div, index) {
-    if (div.id != 'wrapper') {
+    if (div.id != 'wrapperDiv') {
       // Apply fade-out effect by adding 'hide' class
       div.classList.add('hide');
 
