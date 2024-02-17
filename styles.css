@@ -52,9 +52,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #ff5eb9, #5006da);
+  /* background: linear-gradient(45deg, #ff5eb9, #5006da); */
   /* background: linear-gradient(45deg, #ff5f6d, #ffc371); */
-  /* background: linear-gradient(45deg, #5fff6a, #71bdff); */
+  background: linear-gradient(45deg, #5fff6a, #71bdff);
+  /* transition: all 1s ease-in-out; */
   overflow: hidden;
   z-index: -1;
 }
@@ -181,7 +182,7 @@ body {
   transition: top, left, width, height, border-radius;
   transition-duration: 1000ms;
   transition-timing-function: ease-in-out;
-  border-radius: 0.2rem;
+  border-radius: 0.7rem;
   height: 0%;
 }
 
@@ -265,13 +266,14 @@ body {
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(2) {
   top: 65%;
-  left: 42%;
+  left: 43%;
   width: 15%;
   height: 25%;
+  border-radius: 0;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(3) {
   top: 90%;
-  left: 32%;
+  left: 33%;
   width: 35%;
   height: 2%;
 }
@@ -279,14 +281,14 @@ body {
   top: 2%;
   left: 16.5%;
   width: 67%;
-  height: 56.5%;
+  height: 59.5%;
   z-index: 2;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(5) {
-  top: 60%;
+  top: 64%;
   left: 26%;
   width: 48%;
-  height: 0.3%;
+  height: 0.6%;
   z-index: 1;
 }
 #wrapper[data-configuration='1'] > .shape:nth-child(6) {
@@ -349,39 +351,39 @@ body {
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(6),
 .shape:nth-child(7) {
-  top: 13%;
+  top: 12%;
   left: 66%;
-  width: 6%;
-  height: 9.5%;
+  width: 7%;
+  height: 11.5%;
   z-index: 1;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(7) {
-  top: 13%;
+  top: 12%;
   left: 66%;
-  width: 6%;
-  height: 9.5%;
+  width: 7%;
+  height: 11.5%;
   z-index: 1;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(8) {
   top: 23%;
-  left: 60%;
-  width: 6%;
-  height: 9.5%;
+  left: 59%;
+  width: 7%;
+  height: 11.5%;
   z-index: 1;
 }
 #wrapper[data-configuration='2'] > .shape:nth-child(9) {
   top: 23%;
-  left: 60%;
-  width: 6%;
-  height: 9.5%;
+  left: 59%;
+  width: 7%;
+  height: 11.5%;
   z-index: 1;
 }
 
 /*  config #3 : Mobile Dev */
 #wrapper[data-configuration='3'] > .shape:nth-child(1) {
-  top: 0%;
-  left: 30%;
-  width: 25%;
+  top: 0.5%;
+  left: 29.5%;
+  width: 26%;
   height: 80%;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(2) {
@@ -402,7 +404,7 @@ body {
   top: 5.5%;
   left: 31%;
   width: 23%;
-  height: 73%;
+  height: 72.5%;
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(5) {
   top: 26%;
@@ -434,7 +436,7 @@ body {
 }
 #wrapper[data-configuration='3'] > .shape:nth-child(9) {
   top: 90%;
-  left: 61.5%;
+  left: 61%;
   width: 5%;
   height: 8%;
   z-index: 3;

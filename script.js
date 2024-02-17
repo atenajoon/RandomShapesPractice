@@ -51,6 +51,11 @@ const contentArray = [
   ],
 ];
 
+const backgroundColors = [
+  'linear-gradient(45deg, #ff5eb9, #5006da)',
+  'linear-gradient(45deg, #ff5f6d, #ffc371)',
+  'linear-gradient(45deg, #5fff6a, #71bdff)'
+]
 
 const uniqueRand = (min, max, prev) => {
   let next = prev;
@@ -65,7 +70,7 @@ function changeShape() {
   const index = uniqueRand(0, configCombinations.length, prev);
   const combination = configCombinations[index];
   // const combination = configCombinations[1];
-  toggleAlignSelf(index);
+  // toggleAlignSelf(index);
 
   wrapper.dataset.configuration = combination.configuration;
   wrapper.dataset.roundness = combination.roundness;
@@ -73,12 +78,11 @@ function changeShape() {
   prev = index;
 }
 
-function toggleAlignSelf(i) {
-  console.log(i);
-  var shapeContainer = document.getElementById("shape-container");
-  // Check if align-self is currently set to 'end'
-  shapeContainer.style.alignSelf = (i === 1) ? 'end' : '';
-}
+// function toggleAlignSelf(i) {
+//   console.log(i);
+//   var shapeContainer = document.getElementById("shape-container");
+//   shapeContainer.style.alignSelf = (i === 1) ? 'end' : '';
+// }
 
 //  change HTML content
 function changeContent() {
@@ -107,10 +111,17 @@ function changeContent() {
 
   contentIndex = (contentIndex + 1) % contentArray.length;
 }
-
+let colorIndex = 0;
+function changeColor()
+{
+  var backgroundDiv = document.getElementById('background');
+  backgroundDiv.style.background = backgroundColors[colorIndex];
+  colorIndex = (colorIndex + 1) % backgroundColors.length;
+}
 setInterval(() => {
-  changeContent();
+  // changeContent();
   changeShape();
+  changeColor();
 }, 3000);
 
 wrapper.dataset.configuration = 1;
