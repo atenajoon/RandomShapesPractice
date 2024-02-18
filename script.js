@@ -49,11 +49,6 @@ const contentArray = [
   ]
 ];
 
-const bgColorPosition = [
-  'left',
-  'center',
-  'right'
-]
 
 let bgIndex = 1;
 function changeBackground() {
