@@ -162,10 +162,10 @@ body {
   display: grid;
   position: fixed;
   width: 70%;
-  transition: align-self;
+  transition: margin;
   transition-duration: 1200ms;
   transition-timing-function: ease-in-out;
-  top: 50;
+  margin-top: 0.1rem;
 }
 
 #wrapper {

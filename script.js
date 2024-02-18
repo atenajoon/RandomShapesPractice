@@ -1,5 +1,6 @@
 const wrapper = document.getElementById('wrapper');
 const backgroundDiv = document.getElementById('background');
+const shapeContainer = document.getElementById('shape-container');
 
 // 3 shape configs
 const configCombinations = [
@@ -58,6 +59,7 @@ let bgIndex = 1;
 function changeBackground() {
   const combination = configCombinations[bgIndex];
 
+  shapeContainer.style.marginTop = (bgIndex === 1) ? "20rem" : "0";
   backgroundDiv.style.backgroundPosition = combination.position;
   wrapper.dataset.configuration = combination.configuration;
   wrapper.dataset.roundness = combination.roundness;
