@@ -1,18 +1,27 @@
 const wrapper = document.getElementById('wrapper');
-
-const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
-let prev = 0;
+const backgroundDiv = document.getElementById('background');
 
 // 3 shape configs
 const configCombinations = [
-  { configuration: 1, roundness: 1 },
-  { configuration: 2, roundness: 2 },
-  { configuration: 3, roundness: 3 },
+  { configuration: 1, roundness: 1, position: "left" },
+  { configuration: 2, roundness: 2, position: "center" },
+  { configuration: 3, roundness: 3, position: "right" },
 ];
 
 //  3 content configs
 const contentArray = [
+  [
+    'SONAR CLOUD',
+    'GIT',
+    'UNITY',
+    'IOS',
+    'JENKINS',
+    '',
+    'C#',
+    'ANDROID',
+    'TESTFLIGHT',
+    'UX/UI',
+  ],
   [
     'HTML',
     'REACT',
@@ -36,19 +45,7 @@ const contentArray = [
     'REACT NATIVE',
     'UX/UI',
     'JENKINS',
-  ],
-  [
-    'SONAR CLOUD',
-    'GIT',
-    'UNITY',
-    'IOS',
-    'JENKINS',
-    '',
-    'C#',
-    'ANDROID',
-    'TESTFLIGHT',
-    'UX/UI',
-  ],
+  ]
 ];
 
 const bgColorPosition = [
@@ -57,32 +54,16 @@ const bgColorPosition = [
   'right'
 ]
 
-const uniqueRand = (min, max, prev) => {
-  let next = prev;
+let bgIndex = 1;
+function changeBackground() {
+  const combination = configCombinations[bgIndex];
 
-  while (prev === next) next = rand(min, max);
-
-  return next;
-};
-
-
-function changeShape() {
-  const index = uniqueRand(0, configCombinations.length, prev);
-  const combination = configCombinations[index];
-  // const combination = configCombinations[1];
-  // toggleAlignSelf(index);
-
+  backgroundDiv.style.backgroundPosition = combination.position;
   wrapper.dataset.configuration = combination.configuration;
   wrapper.dataset.roundness = combination.roundness;
 
-  prev = index;
+  bgIndex = (bgIndex + 1) % configCombinations.length;
 }
-
-// function toggleAlignSelf(i) {
-//   console.log(i);
-//   var shapeContainer = document.getElementById("shape-container");
-//   shapeContainer.style.alignSelf = (i === 1) ? 'end' : '';
-// }
 
 //  change HTML content
 function changeContent() {
@@ -111,17 +92,10 @@ function changeContent() {
 
   contentIndex = (contentIndex + 1) % contentArray.length;
 }
-let colorIndex = 0;
-function changeColor()
-{
-  var backgroundDiv = document.getElementById('background');
-  backgroundDiv.style.backgroundPosition = bgColorPosition[colorIndex];
-  colorIndex = (colorIndex + 1) % bgColorPosition.length;
-}
+
 setInterval(() => {
   // changeContent();
-  changeShape();
-  changeColor();
+  changeBackground();
 }, 4000);
 
 wrapper.dataset.configuration = 1;
