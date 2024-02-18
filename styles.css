@@ -165,7 +165,7 @@ body {
   transition: margin;
   transition-duration: 1200ms;
   transition-timing-function: ease-in-out;
-  margin-top: 0.1rem;
+  margin-top: 2rem;
 }
 
 #wrapper {
