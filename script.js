@@ -51,10 +51,10 @@ const contentArray = [
   ],
 ];
 
-const backgroundColors = [
-  'linear-gradient(45deg, #ff5eb9, #5006da)',
-  'linear-gradient(45deg, #ff5f6d, #ffc371)',
-  'linear-gradient(45deg, #5fff6a, #71bdff)'
+const bgColorPosition = [
+  'left',
+  'center',
+  'right'
 ]
 
 const uniqueRand = (min, max, prev) => {
@@ -115,14 +115,14 @@ let colorIndex = 0;
 function changeColor()
 {
   var backgroundDiv = document.getElementById('background');
-  backgroundDiv.style.background = backgroundColors[colorIndex];
-  colorIndex = (colorIndex + 1) % backgroundColors.length;
+  backgroundDiv.style.backgroundPosition = bgColorPosition[colorIndex];
+  colorIndex = (colorIndex + 1) % bgColorPosition.length;
 }
 setInterval(() => {
   // changeContent();
   changeShape();
   changeColor();
-}, 3000);
+}, 4000);
 
 wrapper.dataset.configuration = 1;
 wrapper.dataset.roundness = 1;
