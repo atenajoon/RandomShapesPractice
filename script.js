@@ -92,8 +92,8 @@ function changeContent() {
 
 setInterval(() => {
   // changeContent();
-  // changeBackground();
+  changeBackground();
 }, 4000);
 
-wrapper.dataset.configuration = 3;
-wrapper.dataset.roundness = 3;
+wrapper.dataset.configuration = 1;
+wrapper.dataset.roundness = 1;
