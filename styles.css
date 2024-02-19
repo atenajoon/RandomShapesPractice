@@ -29,11 +29,17 @@
   --gray: rgb(79, 79, 79);
   --white: aliceblue;
 /* mobile content */
-  /* --green-text: rgba(4, 106, 89, 0.759);
-  --blue-text: rgb(6, 65, 143); */
+  /* --text-2: rgba(4, 106, 89, 0.759);
+  --text-1: rgb(6, 65, 143); */
   /* game content */
-  --green-text: rgb(244 235 57 / 90%);
-  --blue-text: rgb(62, 248, 167);
+
+  --text-1-1: rgb(150 247 255);
+  --text-1-2: rgb(55 19 118);
+  --text-2-1: rgb(255 252 170);
+  --text-2-2: rgb(106 255 194);
+  --text-3-1: rgb(99, 2, 30);
+  --text-3-2: rgb(62, 248, 167);
+
 }
 
 body {
@@ -63,14 +69,17 @@ body {
 }
 .content-1 {
   font-size: 4rem;
-  color: var(--green-text);
+  /* color: var(--text-3); */
   text-align: center;
   transform: rotate(-25deg);
+  transition: all;
+  transition-duration: 1200ms;
+  transition-timing-function: ease-in-out;
 }
 
 .content-2 {
   font-size: 2.5rem;
-  color: var(--blue-text);
+  color: var(--text-1-1);
   text-align: center;
   transform: rotate(20deg);
 }
