@@ -52,7 +52,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #5fff6a, #41a2f6, #5006da, #5b0335, #f64251, #f6a22d);
+  background: linear-gradient(45deg, #01fe67, #0457fa, #5006da, #5b0335, #f64251, #f6a22d);
   transition: all 1200ms ease-in-out;
   overflow: hidden;
   z-index: -1;
