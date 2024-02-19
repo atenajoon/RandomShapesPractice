@@ -2,6 +2,7 @@ const wrapper = document.getElementById('wrapper');
 const backgroundDiv = document.getElementById('background');
 const shapeContainer = document.getElementById('shape-container');
 const content1 = document.querySelectorAll('.content-1');
+const content2 = document.querySelectorAll('.content-2');
 
 // 3 shape configs
 const configCombinations = [
@@ -59,12 +60,12 @@ function changeBackground() {
   wrapper.dataset.configuration = combination.configuration;
   wrapper.dataset.roundness = combination.roundness;
 
-  changeContent(bgIndex);
+  changeContent();
   bgIndex = (bgIndex + 1) % configCombinations.length;
 }
 
 //  change HTML content
-function changeContent(bgIndex) {
+function changeContent() {
   let contentIndex = 0;
   const currentContent = contentArray[contentIndex];
   // const currentContent = contentArray[2];
@@ -84,10 +85,28 @@ function changeContent(bgIndex) {
         // Update content
         div.textContent = currentContent[index];
 
-        if(bgIndex !== 0)
-        content1.forEach((word) => (word.style.color = 'var(--text-2-1)'));
-      else
-        content1.forEach((word) => (word.style.color = 'var(--text-1-2)'));
+        // switch (bgIndex) {
+        //   case 2:
+        //     content1.forEach((word) => (word.style.color = 'var(--text-3-2)'));
+        //     content2.forEach((word) => (word.style.color = 'var(--text-1-1)'));
+        //     console.log("index: ", bgIndex);
+        //     break;
+        //   case 1:
+        //     content1.forEach((word) => (word.style.color = 'var(--text-2-1)'));
+        //     content2.forEach((word) => (word.style.color = 'var(--text-3-1)'));
+        //     console.log("index: ", bgIndex);
+        //     break;
+        //   case 0:
+        //     content1.forEach((word) => (word.style.color = 'var(--text-1-2)'));
+        //     content2.forEach((word) => (word.style.color = 'var(--text-1-1)'));
+        //     console.log("index: ", bgIndex);
+        //   break;
+        // }
+  
+      //   if(bgIndex !== 0)
+      //   content1.forEach((word) => (word.style.color = 'var(--text-2-1)'));
+      // else
+      //   content1.forEach((word) => (word.style.color = 'var(--text-1-2)'));
   
         // Apply fade-in effect by removing 'hide' class
         div.classList.remove('hide');
